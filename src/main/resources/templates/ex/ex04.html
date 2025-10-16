@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex04</title>
+</head>
+<body>
+    <form action="/ex/ex05">
+        <div>
+            <span>이름</span>
+            <input type="text" name="userName" placeholder="이름" />
+        </div>
+        <div>
+            <span>나이</span>
+            <input type="text" name="userAge" placeholder="나이" />
+        </div>
+        <div>
+            <span>메일</span>
+            <input type="text" name="userEmail" placeholder="메일" />
+        </div>
+        <div>
+            <span>전화번호</span>
+            <input type="text" name="userPhone" placeholder="전화번호" />
+        </div>
+        <button type="button">제출</button>
+    </form>
+</body>
+<script type="text/javascript">
+    const submitButton = document.querySelector("button");
+    const form = document.querySelector("form");
+    const inputs = document.querySelectorAll("input");
+    submitButton.addEventListener("click", (e) => {
+        let isEmpty = false;
+        for(input of inputs) {
+           if (!isEmpty) {
+               if (input.value === "") {
+                   alert(input.placeholder + "가 비어있습니다.");
+                   isEmpty = true;
+               }
+           }
+       }
+        if (!isEmpty) {
+            form.submit();
+        }
+    });
+</script>
+</html>
