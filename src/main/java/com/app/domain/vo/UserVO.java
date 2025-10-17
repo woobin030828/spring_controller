@@ -1,4 +1,4 @@
-package com.app.controller.domain.vo;
+package com.app.domain.vo;
 
 import lombok.Data;
 

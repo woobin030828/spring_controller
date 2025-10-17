@@ -1,9 +1,8 @@
 package com.app.controller.controller;
 
-import com.app.controller.domain.vo.ProductVO;
-import com.app.controller.domain.vo.UserVO;
+import com.app.domain.vo.ProductVO;
+import com.app.domain.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
